@@ -1,0 +1,5 @@
+# Generated from the combos section of randomcontainers/pgcli package.yml by randomcontainers/ci.
+# Do not edit; change package.yml in randomcontainers/pgcli instead.
+name: pgcli-postgresql-client
+owner: pgcli
+with: [postgresql-client]
