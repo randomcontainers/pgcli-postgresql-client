@@ -58,7 +58,7 @@ gh attestation verify oci://ghcr.io/randomcontainers/pgcli-postgresql-client:lat
   --repo randomcontainers/pgcli-postgresql-client --signer-repo randomcontainers/ci
 ```
 
-Each image also has a keyless cosign signature from the same workflow, for admission controllers that check cosign signatures:
+Images published since November 2026 also have a keyless cosign signature from the same workflow, for admission controllers that check cosign signatures. Tags last built before then have only the attestation.
 
 ```sh
 cosign verify ghcr.io/randomcontainers/pgcli-postgresql-client:latest \
@@ -67,7 +67,7 @@ cosign verify ghcr.io/randomcontainers/pgcli-postgresql-client:latest \
   --certificate-github-workflow-repository randomcontainers/pgcli-postgresql-client
 ```
 
-Images from `ghcr.io/randomcontainers/pgcli` are built in [randomcontainers/pgcli](https://github.com/randomcontainers/pgcli), so name that repository in `--repo` and `--certificate-github-workflow-repository`.
+Images from `ghcr.io/randomcontainers/pgcli` are built in [randomcontainers/pgcli](https://github.com/randomcontainers/pgcli), so use `randomcontainers/pgcli` in `--repo` and `--certificate-github-workflow-repository`.
 
 ## Updates
 
